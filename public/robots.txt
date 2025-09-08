@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive areas (if any)
+Disallow: /admin
+Disallow: /api/private
+
+# Allow all important content
+Allow: /services/
+Allow: /about
+Allow: /privacy
+Allow: /blog
+
+# Sitemap location
+Sitemap: https://pvapanel.com/sitemap.xml

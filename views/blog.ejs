@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - PVA Panel</title>
+    <meta name="description" content="Stay informed with the latest insights on phone-verified social media accounts, digital marketing strategies, and platform verification best practices.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<%- include('partials/navbar') %>
+
+<!-- Blog Hero Section -->
+<section class="blog-hero" style="background: linear-gradient(135deg, #44a08d 0%, #093637 50%, #44a08d 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-center text-white">
+                <i class="fab fa-blogger-b hero-icon" style="color: #ffffff;"></i>
+                <h1 class="display-4 fw-bold hero-content mb-3">PVA Panel Blog</h1>
+                <p class="lead fs-4 mb-4">Expert insights, strategies, and updates on social media verification, PVA accounts, and digital marketing best practices.</p>
+                <div class="stat-row d-flex justify-content-center gap-4 flex-wrap">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Articles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Monthly Readers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Weekly</div>
+                        <div class="stat-label">New Content</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="big-quote">
+                    <blockquote class="blockquote">
+                        <p class="mb-3">"Knowledge is the key to unlocking your potential in the digital world."</p>
+                        <footer class="blockquote-footer text-white-50">PVA Panel Team</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<div class="container my-5">
+
+    <!-- Featured Article -->
+    <div class="featured-article mb-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card featured-card">
+                    <div class="card-body p-5">
+                        <div class="featured-badge mb-3">
+                            <span class="badge-featured">Featured Article</span>
+                        </div>
+                        <h2 class="card-title h1 mb-4">Ultimate Guide to Phone-Verified Accounts in 2025</h2>
+                        <p class="card-text lead mb-4">Discover everything you need to know about PVA accounts, their importance in 2025, and how to maximize their potential for your social media marketing campaigns.</p>
+                        <div class="meta-info mb-4">
+                            <span class="me-4">
+                                <i class="fas fa-calendar-alt me-1"></i>
+                                September 8, 2025
+                            </span>
+                            <span class="me-4">
+                                <i class="fas fa-user me-1"></i>
+                                Alexandra Chen
+                            </span>
+                            <span class="me-4">
+                                <i class="fas fa-clock me-1"></i>
+                                12 min read
+                            </span>
+                            <span>
+                                <i class="fas fa-eye me-1"></i>
+                                1,250 views
+                            </span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <span class="tag-popular">Social Media Marketing</span>
+                            <span class="tag-popular">PVA Accounts</span>
+                            <span class="tag-popular">Verification Guide</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-lg mt-3">
+                            <i class="fas fa-book-open me-2"></i>Read Full Article
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-content">
+                    <!-- Popular Categories -->
+                    <div class="sidebar-card mb-4">
+                        <h5 class="sidebar-title">
+                            <i class="fas fa-tags text-primary me-2"></i>Popular Categories
+                        </h5>
+                        <div class="category-list">
+                            <a href="#" class="category-link">Social Media Marketing <span class="count">(28)</span></a>
+                            <a href="#" class="category-link">Account Verification <span class="count">(15)</span></a>
+                            <a href="#" class="category-link">Platform Updates <span class="count">(12)</span></a>
+                            <a href="#" class="category-link">Best Practices <span class="count">(22)</span></a>
+                            <a href="#" class="category-link">Case Studies <span class="count">(8)</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-card bg-gradient-primary text-white">
+                        <h5 class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>Stay Updated
+                        </h5>
+                        <p class="mb-3">Get the latest insights and strategies delivered to your inbox weekly.</p>
+                        <form class="newsletter-form">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <button type="submit" class="btn btn-light btn-sm">
+                                <i class="fas fa-paper-plane me-2"></i>Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Articles Grid -->
+    <section class="recent-articles">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Latest Articles</h2>
+            <p class="lead text-muted">Stay ahead of the curve with our expert insights and analysis</p>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Article 1 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm">Guide</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">Why Social Media Platforms Require Phone Verification</a>
+                        </h3>
+                        <p class="text-muted mb-3">Understand the security reasons behind phone verification and how it improves platform integrity for all users.</p>
+                        <div class="meta-small mb-3">
+                            <span>Sep 6, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>Marcus Rodriguez</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>8 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">Security</span>
+                            <span class="tag-sm">Platforms</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line fa-3x text-success"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm bg-success">Case Study</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">How PVA Accounts Boosted Engagement by 300%</a>
+                        </h3>
+                        <p class="text-muted mb-3">A real-world case study showing how verified accounts can significantly improve social media performance and reach.</p>
+                        <div class="meta-small mb-3">
+                            <span>Sep 5, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>Sarah Thompson</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>6 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">Engagement</span>
+                            <span class="tag-sm">Analytics</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-exclamation-triangle fa-3x text-warning"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm bg-warning text-dark">Alert</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">2025 Platform Verification Changes: What You Need to Know</a>
+                        </h3>
+                        <p class="text-muted mb-3">Stay ahead of upcoming verification requirements across major social media platforms and prepare accordingly.</p>
+                        <div class="meta-small mb-3">
+                            <span>Sep 3, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>David Park</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>10 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">Updates</span>
+                            <span class="tag-sm">Compliance</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-dollar-sign fa-3x text-success"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm bg-success">Tips</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">Maximizing ROI from Phone-Verified Accounts</a>
+                        </h3>
+                        <p class="text-muted mb-3">Learn how to get the most value from your PVA accounts and optimize your social media marketing budget.</p>
+                        <div class="meta-small mb-3">
+                            <span>Sep 1, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>Alexandra Chen</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>9 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">ROI</span>
+                            <span class="tag-sm">Marketing</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shield-alt fa-3x text-danger"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm bg-danger">Security</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">Account Security Best Practices: Protecting Your PVA Investment</a>
+                        </h3>
+                        <p class="text-muted mb-3">Essential security measures to protect your phone-verified accounts and maintain their long-term value.</p>
+                        <div class="meta-small mb-3">
+                            <span>Aug 28, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>Marcus Rodriguez</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>7 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">Security</span>
+                            <span class="tag-sm">Best Practices</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="col-lg-6 col-xl-4">
+                <article class="blog-card h-100">
+                    <div class="blog-image mb-3">
+                        <div class="image-placeholder">
+                            <i class="fas fa-brain fa-3x text-info"></i>
+                        </div>
+                        <div class="article-tag">
+                            <span class="badge-sm bg-info">Insights</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="h4 mb-3">
+                            <a href="#" class="text-decoration-none text-dark">AI and Machine Learning in Social Media Verification</a>
+                        </h3>
+                        <p class="text-muted mb-3">Explore how emerging technologies are revolutionizing account verification and what it means for marketers.</p>
+                        <div class="meta-small mb-3">
+                            <span>Aug 25, 2025</span>
+                            <span class="text-primary">•</span>
+                            <span>Chris Bennett</span>
+                            <span class="text-primary">•</span>
+                            <span>i</span>
+                            <span>11 min read</span>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag-sm">Technology</span>
+                            <span class="tag-sm">Innovation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-plus-circle me-2"></i>Load More Articles
+            </button>
+        </div>
+    </section>
+
+    <!-- Author Spotlight -->
+    <section class="author-spotlight bg-light py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h3 class="h2 mb-4">Meet Our Experts</h3>
+                    <p class="lead text-muted mb-4">Get to know the team behind PVA Panel's content and insights</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="author-card text-center">
+                        <div class="author-avatar mx-auto mb-3">
+                            <i class="fas fa-user-tie fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="author-name mb-2">Alexandra Chen</h5>
+                        <p class="author-title text-primary mb-2">Chief Content Officer</p>
+                        <p class="small text-muted">15+ years in digital marketing and content creation</p>
+                        <div class="author-stats mt-3">
+                            <div class="stat-mini">
+                                <div class="stat-number-mini">45</div>
+                                <div class="stat-label-mini">Articles</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="author-card text-center">
+                        <div class="author-avatar mx-auto mb-3">
+                            <i class="fas fa-user-astronaut fa-3x text-success"></i>
+                        </div>
+                        <h5 class="author-name mb-2">Marcus Rodriguez</h5>
+                        <p class="author-title text-success mb-2">Technology Writer</p>
+                        <p class="small text-muted">Tech industry expert and cybersecurity specialist</p>
+                        <div class="author-stats mt-3">
+                            <div class="stat-mini">
+                                <div class="stat-number-mini">32</div>
+                                <div class="stat-label-mini">Articles</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="author-card text-center">
+                        <div class="author-avatar mx-auto mb-3">
+                            <i class="fas fa-user-graduate fa-3x text-info"></i>
+                        </div>
+                        <h5 class="author-name mb-2">Sarah Thompson</h5>
+                        <p class="author-title text-info mb-2">Marketing Analyst</p>
+                        <p class="small text-muted">Social media marketing expert and data analyst</p>
+                        <div class="author-stats mt-3">
+                            <div class="stat-mini">
+                                <div class="stat-number-mini">38</div>
+                                <div class="stat-label-mini">Articles</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="author-card text-center">
+                        <div class="author-avatar mx-auto mb-3">
+                            <i class="fas fa-user-secret fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="author-name mb-2">David Park</h5>
+                        <p class="author-title text-warning mb-2">Compliance Expert</p>
+                        <p class="small text-muted">Privacy and security policy specialist</p>
+                        <div class="author-stats mt-3">
+                            <div class="stat-mini">
+                                <div class="stat-number-mini">28</div>
+                                <div class="stat-label-mini">Articles</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter bg-primary text-white py-5 rounded">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="h2 mb-3">Find What You're Looking For</h3>
+                    <p class="mb-0">Use our search and filters to discover specific topics and get the information you need.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="search-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Search articles...">
+                            <button class="btn btn-light btn-lg" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-tags mt-3">
+                            <span class="filter-tag">PVA</span>
+                            <span class="filter-tag">Social Media</span>
+                            <span class="filter-tag">Marketing</span>
+                            <span class="filter-tag">Security</span>
+                            <span class="filter-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<%- include('partials/foot') %>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+.blog-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-icon {
+    -webkit-text-stroke: 2px #ffffff;
+    background: linear-gradient(135deg, #44a08d, #093637);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.stat-row {
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.big-quote .blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.big-quote .blockquote-footer {
+    font-size: 1.1rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.featured-article {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 3rem;
+}
+
+.featured-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.featured-badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
+.badge-featured {
+    background: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.meta-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.meta-info i {
+    margin-right: 0.3rem;
+}
+
+.tag-popular {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.big-quote {
+    position: relative;
+}
+
+.big-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Georgia', serif;
+}
+
+.sidebar-content {
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-card.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+}
+
+.sidebar-title {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.category-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #495057;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.category-link:hover {
+    color: #667eea;
+    transform: translateX(5px);
+}
+
+.category-link:last-child {
+    border-bottom: none;
+}
+
+.count {
+    background: #e9ecef;
+    color: #667eea;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.newsletter-form input {
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.newsletter-form button {
+    border-radius: 25px;
+    margin: 0 auto;
+    display: block;
+    min-width: 120px;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.blog-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.blog-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.article-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.badge-sm {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.article-tag a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.meta-small {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.article-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag-sm {
+    background: #e9ecef;
+    color: #495057;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.blog-content h3 a {
+    color: #212529;
+    transition: color 0.3s ease;
+}
+
+.blog-content h3 a:hover {
+    color: #667eea;
+}
+
+.author-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+.author-avatar {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.author-name {
+    font-weight: 600;
+    color: #212529;
+}
+
+.author-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.author-stats {
+    display: flex;
+    justify-content: center;
+}
+
+.stat-mini {
+    text-align: center;
+}
+
+.stat-number-mini {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stat-label-mini {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.search-filter {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.search-form .form-control {
+    border-radius: 25px 0 0 25px;
+    border: 2px solid #fff;
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+}
+
+.search-form .btn {
+    border-radius: 0 25px 25px 0;
+    border: 2px solid #fff;
+    padding: 0.75rem 1.5rem;
+}
+
+.search-form .btn:hover {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tag:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.section-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+    .featured-article {
+        padding: 2rem 1rem;
+    }
+
+    .search-filter .row {
+        flex-direction: column;
+    }
+
+    .search-filter .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+
+    .filter-tags {
+        justify-content: flex-start;
+    }
+}
+
+/* Smooth hover animations */
+.blog-card, .author-card, .sidebar-card {
+    border: none;
+}
+
+.blog-card:hover .image-placeholder,
+.author-card:hover .author-avatar {
+    transform: scale(1.05);
+}
+
+.image-placeholder, .author-avatar {
+    transition: transform 0.3s ease;
+}
+</style>
+
+<script>
+// Newsletter form handler
+document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input').value;
+    if (email) {
+        alert('Thank you for subscribing! You\'ll receive our latest updates soon.');
+        this.querySelector('input').value = '';
+    }
+});
+
+// Load more articles functionality (placeholder)
+document.querySelector('button:contains("Load More")').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-plus-circle me-2"></i>Load More Articles';
+        alert('More articles would be loaded here in a real implementation.');
+    }, 2000);
+});
+
+// Article filter functionality (placeholder)
+document.querySelectorAll('.filter-tag').forEach(tag => {
+    tag.addEventListener('click', function() {
+        document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        alert(`Filtering articles for: ${this.textContent}`);
+    });
+});
+
+// Article interaction tracking (placeholder)
+document.querySelectorAll('.blog-card a[href="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        alert('Article reading would be tracked here. Full article would load in a real implementation.');
+    });
+});
+</script>
+
+</body>
+</html>
