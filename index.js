@@ -81,6 +81,30 @@ app.get('/order-now', (req, res) => {
     res.render('order');
 });
 
+// Checkout Page
+app.get('/checkout', (req, res) => {
+    const product = req.query.product || '';
+    res.render('checkout', { product });
+});
+
+// Handle order submission
+app.post('/submit-order', (req, res) => {
+    // Handle the order submission logic here
+    // For now, just render a success message
+    const { email, telegram, product, quantity, payment, blockchainFee, txid } = req.body;
+    res.send(`
+        <h1>Order Submitted Successfully!</h1>
+        <p>Email: ${email}</p>
+        <p>Telegram: ${telegram}</p>
+        <p>Product: ${product}</p>
+        <p>Quantity: ${quantity}</p>
+        <p>Payment: ${payment}</p>
+        <p>Blockchain Fee: ${blockchainFee}</p>
+        <p>TXID: ${txid}</p>
+        <a href="/">Back to Home</a>
+    `);
+});
+
 app.listen(PORT, () => {
     console.log(`PVA Panel server running on port ${PORT}`);
 });
