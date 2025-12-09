@@ -473,7 +473,6 @@ footer i:hover {
     justify-content: center;
     border-radius: 8px;
     margin-bottom: 15px;
-    font-size: 3rem;
     color: #6c757d;
 }
 
@@ -504,6 +503,32 @@ footer i:hover {
     font-size: 1.5rem;
     color: #FF6B35;
     font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-card .product-image {
+        height: 80px;
+        margin-bottom: 10px;
+        font-size: 2rem; /* or smaller */
+    }
+
+    .product-card .product-title {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .product-card .large-price {
+        font-size: 1.3rem;
+    }
+
+    .product-card .cta-button {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
 }
 
 .product-card .cta-button {
