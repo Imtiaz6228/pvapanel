@@ -575,3 +575,20 @@ footer i:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #764ba2;
 }
+
+/* Tawk.to Live Chat Positioning */
+.tawk-min-container,
+.tawk-min-chat,
+.tawk-max-chat {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999 !important;
+}
+
+.tawk-max-container {
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 999999 !important;
+}
