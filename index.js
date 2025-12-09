@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Set up EJS
 app.set('view engine', 'ejs');
@@ -105,6 +105,7 @@ app.post('/submit-order', (req, res) => {
     `);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`PVA Panel server running on port ${PORT}`);
 });
+
