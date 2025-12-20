@@ -72,7 +72,7 @@ app.get('/tiktok-pva', (req, res) => {
     res.render('services/tiktok');
 });
 
-app.get('/naver-pva', (req, res) => {
+app.get('/naver-pva-accounts', (req, res) => {
     res.render('services/naver');
 });
 
@@ -108,4 +108,3 @@ app.post('/submit-order', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`PVA Panel server running on port ${PORT}`);
 });
-
