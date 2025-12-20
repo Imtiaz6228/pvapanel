@@ -13,26 +13,167 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
+    <script>
+    // Dynamic Product Schema Population for 2025 Google Merchant Standards
+    document.addEventListener('DOMContentLoaded', function() {
+        // Pull product data from meta tags and page content
+        const productTitle = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : 'Gmail PVA Accounts';
+        const metaDescription = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : '';
+        const canonicalUrl = document.querySelector('link[rel="canonical"]') ? document.querySelector('link[rel="canonical"]').getAttribute('href') : '';
+
+        // Extract pricing from page elements (fallback values)
+        let lowPrice = '12', highPrice = '500';
+        const priceElements = document.querySelectorAll('.price');
+        if (priceElements.length > 0) {
+            const prices = [];
+            priceElements.forEach(el => {
+                const priceText = el.textContent.replace(/[^0-9.]/g, '');
+                if (priceText && !isNaN(priceText)) {
+                    prices.push(parseFloat(priceText));
+                }
+            });
+            if (prices.length > 0) {
+                lowPrice = Math.min(...prices).toString();
+                highPrice = Math.max(...prices).toString();
+            }
+        }
+
+        // Generate offers array from pricing cards
+        const offers = [];
+        const pricingCards = document.querySelectorAll('.pricing-card .card-body');
+        pricingCards.forEach((card, index) => {
+            const priceEl = card.querySelector('.price');
+            const descriptionEl = card.querySelector('li') || card.querySelector('ul li');
+
+            if (priceEl && index < 5) { // Limit to first 5 offers
+                const price = priceEl.textContent.replace(/[^0-9.]/g, '');
+                const description = descriptionEl ? descriptionEl.textContent.trim() : `Gmail PVA Package ${index + 1}`;
+
+                offers.push({
+                    "@type": "Offer",
+                    "price": price || "15",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "priceValidUntil": "2026-06-19",
+                    "description": description.substring(0, 100) // Truncate for schema
+                });
+            }
+        });
+
+        // If no offers found, use default ones
+        if (offers.length === 0) {
+            offers.push(
+                {
+                    "@type": "Offer",
+                    "price": "15",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "priceValidUntil": "2026-06-19",
+                    "description": "25 Gmail PVA Accounts - 3 Months Old"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "30",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "priceValidUntil": "2026-06-19",
+                    "description": "50 Gmail PVA Accounts - 3 Months Old"
+                }
+            );
+        }
+
+        // Create dynamic schema
+        const productSchema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": productTitle,
+            "description": metaDescription || "Premium phone-verified Gmail PVA accounts in multiple age categories for email marketing. 3-month, 1-year, and 2-3 year old verified Gmail accounts with enhanced deliverability.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Pvapanel"
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": lowPrice,
+                "highPrice": highPrice,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "priceValidUntil": "2026-06-19",
+                "offers": offers
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "150"
+            }
+        };
+
+        // Insert or update the schema
+        let schemaScript = document.getElementById('product-schema');
+        if (!schemaScript) {
+            schemaScript = document.createElement('script');
+            schemaScript.type = 'application/ld+json';
+            schemaScript.id = 'product-schema';
+            document.head.appendChild(schemaScript);
+        }
+        schemaScript.textContent = JSON.stringify(productSchema, null, 2);
+
+        // Add Merchant Center compliance meta tag
+        const merchantMeta = document.createElement('meta');
+        merchantMeta.name = 'google';
+        merchantMeta.content = 'nositelinkssearchbox';
+        if (!document.querySelector('meta[name="google"]')) {
+            document.head.appendChild(merchantMeta);
+        }
+    });
+    </script>
+    <script type="application/ld+json" id="product-schema">
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Buy Gmail PVA Accounts",
-      "description": "Buy premium phone-verified Gmail PVA accounts for enhanced email deliverability and professional use. 3-month, 1-year, and 2-3 year old verified accounts.",
+      "name": "Buy Aged PVA Gmail Accounts (100% Verified & Secure Delivery)",
+      "description": "Premium phone-verified Gmail PVA accounts in multiple age categories for email marketing. 3-month, 1-year, and 2-3 year old verified Gmail accounts with enhanced deliverability.",
       "brand": {
         "@type": "Brand",
-        "name": "PVA Panel"
+        "name": "Pvapanel"
       },
       "offers": {
-        "@type": "Offer",
-        "price": "15",
+        "@type": "AggregateOffer",
+        "lowPrice": "12",
+        "highPrice": "500",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceValidUntil": "2026-06-19",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "15",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "priceValidUntil": "2026-06-19",
+            "description": "25 Gmail PVA Accounts - 3 Months Old"
+          },
+          {
+            "@type": "Offer",
+            "price": "30",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "priceValidUntil": "2026-06-19",
+            "description": "50 Gmail PVA Accounts - 3 Months Old"
+          }
+        ]
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1000"
+        "ratingValue": "4.8",
+        "reviewCount": "150"
       }
     }
     </script>
@@ -47,7 +188,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8 text-center text-white">
                 <i class="fab fa-google hero-icon" style="background: linear-gradient(135deg, #EA4335, #4285F4, #34A853, #FBBC05); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"></i>
-                <h1 class="display-4 fw-bold hero-content mb-3">Gmail PVA Accounts</h1>
+                <h1 class="display-4 fw-bold hero-content mb-3">Buy Aged PVA Gmail Accounts (100% Verified & Secure Delivery)</h1>
                 <p class="lead fs-4 mb-5">Premium phone-verified Gmail accounts perfect for all your digital needs. Including email marketing, Google Services integration, and more.</p>
 
                 <!-- Action Buttons -->
