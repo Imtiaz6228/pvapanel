@@ -36,39 +36,39 @@ app.get('/blog', (req, res) => {
 });
 
 // Service Pages
-app.get('/gmail-pva', (req, res) => {
+app.get('/gmail-pva-accounts', (req, res) => {
     res.render('services/gmail');
 });
 
-app.get('/instagram-pva', (req, res) => {
+app.get('/instagram-pva-accounts', (req, res) => {
     res.render('services/instagram');
 });
 
-app.get('/threads-pva', (req, res) => {
+app.get('/threads-pva-accounts', (req, res) => {
     res.render('services/threads');
 });
 
-app.get('/facebook-pva', (req, res) => {
+app.get('/facebook-pva-accounts', (req, res) => {
     res.render('services/facebook');
 });
 
-app.get('/linkedin-pva', (req, res) => {
+app.get('/linkedin-pva-accounts', (req, res) => {
     res.render('services/linkedin');
 });
 
-app.get('/twitter-pva', (req, res) => {
+app.get('/twitter-pva-accounts', (req, res) => {
     res.render('services/twitter');
 });
 
-app.get('/google-voice-pva', (req, res) => {
+app.get('/google-voice-pva-accounts', (req, res) => {
     res.render('services/google-voice');
 });
 
-app.get('/youtube-pva', (req, res) => {
+app.get('/youtube-pva-accounts', (req, res) => {
     res.render('services/youtube');
 });
 
-app.get('/tiktok-pva', (req, res) => {
+app.get('/tiktok-pva-accounts', (req, res) => {
     res.render('services/tiktok');
 });
 
