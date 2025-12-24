@@ -6,8 +6,10 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://pvapanel.com/sitemap.xml
+Sitemap: https://pvapanel.com/page-sitemap.xml
+Sitemap: https://pvapanel.com/product-sitemap.xml
 
 # Additional sitemaps for AI agents
 Sitemap: https://pvapanel.com/sitemap-chatgpt.xml
