@@ -105,6 +105,23 @@ app.post('/submit-order', (req, res) => {
     `);
 });
 
+// Sitemap routes to ensure accessibility
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+app.get('/page-sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'page-sitemap.xml'));
+});
+
+app.get('/product-sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'product-sitemap.xml'));
+});
+
+app.get('/sitemap-chatgpt.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'sitemap-chatgpt.xml'));
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`PVA Panel server running on port ${PORT}`);
 });
